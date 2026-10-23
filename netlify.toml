@@ -1,12 +1,24 @@
-
 [build]
-  # 构建命令，例如使用 Next.js 或者其它静态站点生成器
-  command = "npm run build:h5"
-  # 发布目录，表示构建后的文件将被发布到此目录
-  publish = "dist/build/h5"
+  command = "pnpm build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.cnodejs.org/api/v1/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[headers]]
-  # 示例：为所有的 .html 文件设置缓存控制
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
   for = "/**.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"

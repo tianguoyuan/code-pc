@@ -1,26 +1,57 @@
 <!doctype html>
-<html build-time="%BUILD_TIME%">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
-    <script>
-      var coverSupport =
-        'CSS' in window &&
-        typeof CSS.supports === 'function' &&
-        (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
-      document.write(
-        '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
-          (coverSupport ? ', viewport-fit=cover' : '') +
-          '" />',
-      )
-    </script>
-    <title>unibest</title>
-    <!--preload-links-->
-    <!--app-context-->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CNode 社区 PC 端 —— Node.js 中文技术社区，分享、问答、招聘与交流。"
+    />
+    <title>CNode 社区</title>
+    <style>
+      html,
+      body,
+      #app {
+        height: 100%;
+        margin: 0;
+      }
+      #app-loading {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        color: #018d71;
+        font-family:
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          'Helvetica Neue',
+          Arial,
+          sans-serif;
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+      #app-loading::before {
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+        content: '';
+        border: 2px solid #d5efe9;
+        border-top-color: #018d71;
+        border-radius: 50%;
+        animation: app-loading-spin 0.8s linear infinite;
+      }
+      @keyframes app-loading-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <div id="app"><!--app-html--></div>
+    <div id="app"><div id="app-loading">CNode</div></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

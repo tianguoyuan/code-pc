@@ -1,25 +1,30 @@
-import 'abortcontroller-polyfill/dist/abortcontroller-polyfill-only'
+import ElementPlus from 'element-plus'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
+import { createPinia } from 'pinia'
+import { createApp } from 'vue'
 
-import '@/style/index.scss'
+import 'element-plus/dist/index.css'
+import 'nprogress/nprogress.css'
 import 'virtual:uno.css'
-import '@tuniao/tn-icon/dist/index.css'
+import '@/styles/index.scss'
 
-import { createSSRApp } from 'vue'
+import { restoreSession } from '@/api/session'
+import { useUserStore } from '@/stores/user'
 
 import App from './App.vue'
-import { prototypeInterceptor, requestInterceptor, routeInterceptor } from './interceptors'
-import i18n from './locale'
-import store from './store'
+import router from './router'
 
-export function createApp() {
-  const app = createSSRApp(App)
-  app.use(store)
-  app.use(i18n)
-  app.use(routeInterceptor)
-  app.use(requestInterceptor)
-  app.use(prototypeInterceptor)
+const app = createApp(App)
+const pinia = createPinia()
 
-  return {
-    app,
-  }
+app.use(pinia)
+app.use(router)
+app.use(ElementPlus, { locale: zhCn })
+
+const userStore = useUserStore(pinia)
+if (userStore.accesstoken) {
+  // 后台静默校验本地 token，失败会自动清理登录态
+  void restoreSession()
 }
+
+app.mount('#app')
