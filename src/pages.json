@@ -1,0 +1,124 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^(?!z-paging-refresh|z-paging-load-more)z-paging(.*)": "z-paging/components/z-paging$1/z-paging$1.vue"
+    }
+  },
+  "globalStyle": {
+    "backgroundColor": "#FFFFFF",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "全套医疗APP",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "backgroundColor": "#F8F8F8",
+    "borderStyle": "black",
+    "color": "#999999",
+    "custom": true,
+    "fontSize": "10px",
+    "height": "50px",
+    "iconWidth": "24px",
+    "list": [
+      {
+        "pagePath": "pages/home/home"
+      },
+      {
+        "pagePath": "pages/resident/resident"
+      },
+      {
+        "pagePath": "pages/message/message"
+      },
+      {
+        "pagePath": "pages/mine/mine"
+      }
+    ],
+    "selectedColor": "#018d71",
+    "spacing": "3px"
+  },
+  "pages": [
+    {
+      "path": "pages/dashboard/dashboard",
+      "type": "home",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "引导页"
+      }
+    },
+    {
+      "path": "pages/home/home",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "首页"
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/message/message",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "消息"
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/mine/mine",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "我的"
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/resident/resident",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "居民"
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/user/login",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "登录"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pagesA",
+      "pages": [
+        {
+          "path": "demo/demo",
+          "type": "page",
+          "layout": "default",
+          "style": {
+            "navigationStyle": "custom",
+            "navigationBarTitleText": "demo"
+          }
+        },
+        {
+          "path": "webview/webview",
+          "type": "page",
+          "layout": "default",
+          "style": {
+            "navigationBarTitleText": "webview"
+          }
+        }
+      ]
+    }
+  ]
+}

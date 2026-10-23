@@ -1,0 +1,15 @@
+{
+  "app.name": "全套医疗APP",
+  "app.tab.home": "首页",
+  "app.tab.resident": "居民",
+  "app.tab.message": "消息",
+  "app.tab.mine": "我的",
+  "common.confirm": "确认",
+  "common.cancel": "取消",
+  "common.loading": "加载中...",
+  "common.noData": "暂无数据",
+  "login.title": "登录",
+  "login.phone": "手机号",
+  "login.code": "验证码",
+  "home.welcome": "欢迎回来"
+}

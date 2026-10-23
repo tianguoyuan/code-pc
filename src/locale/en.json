@@ -1,0 +1,15 @@
+{
+  "app.name": "Complete Medical Care",
+  "app.tab.home": "Home",
+  "app.tab.resident": "Resident",
+  "app.tab.message": "Messages",
+  "app.tab.mine": "Mine",
+  "common.confirm": "Confirm",
+  "common.cancel": "Cancel",
+  "common.loading": "Loading...",
+  "common.noData": "No Data",
+  "login.title": "Login",
+  "login.phone": "Phone",
+  "login.code": "Verification Code",
+  "home.welcome": "Welcome back"
+}

@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "outDir": "dist",
+    "lib": ["esnext", "dom"],
+    "types": [
+      "@dcloudio/types",
+      "@uni-helper/uni-types",
+      "@types/wechat-miniprogram",
+      "z-paging/types",
+      "./src/typings.d.ts"
+    ]
+  },
+  "vueCompilerOptions": {
+    "plugins": ["@uni-helper/uni-types/volar-plugin"]
+  },
+  "exclude": ["node_modules"],
+  "include": [
+    "pages.config.ts",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.jsx",
+    "src/**/*.vue",
+    "src/**/*.json"
+  ]
+}

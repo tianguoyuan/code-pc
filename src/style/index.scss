@@ -1,0 +1,45 @@
+@import '@tuniao/tn-style/dist/uniapp/index.css';
+
+:root,
+page {
+  /* 主题色Hex值 */
+  --tn-color-primary: #37c2bc;
+  font-size: 24rpx;
+  line-height: 1;
+  // color: #1a1a1a;
+  color: #1c2023;
+  /* 禁止双击放大 */
+  touch-action: manipulation;
+  user-select: none;
+
+  background-color: #fff;
+}
+/* stylelint-disable selector-type-no-unknown */
+button::after {
+  border: none;
+}
+
+swiper,
+scroll-view {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.fade-enter-active {
+  transition: opacity 0.5s ease;
+}
+.fade-leave-active {
+  transition: opacity 0;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
