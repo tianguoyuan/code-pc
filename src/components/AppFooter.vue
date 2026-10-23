@@ -28,7 +28,12 @@
           <div>
             <div class="mb-2 text-3 text-[#15181b] font-bold">相关链接</div>
             <div class="flex flex-col gap-1.5 text-3 text-[#7b8188]">
-              <a class="hover:text-[#018d71]" href="https://cnodejs.org" rel="noreferrer" target="_blank">
+              <a
+                class="hover:text-[#018d71]"
+                href="https://cnodejs.org"
+                rel="noreferrer"
+                target="_blank"
+              >
                 CNode 官网
               </a>
               <a
@@ -41,7 +46,7 @@
               </a>
               <a
                 class="hover:text-[#018d71]"
-                href="https://api.cnodejs.org"
+                href="https://cnodejs.org/api"
                 rel="noreferrer"
                 target="_blank"
               >
