@@ -32,7 +32,10 @@ const tabOptions = computed(() => {
     .filter((item) => item.visible !== false && item.scope !== 'admin')
     .sort((a, b) => a.sort_order - b.sort_order)
     .map((item) => ({ key: item.key, label: item.label }))
-  return publicTabs.length ? publicTabs : TOPIC_TABS.map((item) => ({ ...item }))
+
+  const source = publicTabs.length ? publicTabs : TOPIC_TABS.map((item) => ({ ...item }))
+  const hasAll = source.some((item) => item.key === 'all')
+  return hasAll ? source : [{ key: 'all', label: '全部' }, ...source]
 })
 
 async function loadTabs() {
